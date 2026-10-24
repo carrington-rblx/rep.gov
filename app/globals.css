@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-navy antialiased bg-canvas;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center rounded-full bg-accent-gradient text-black font-extrabold text-xs tracking-wider uppercase px-6 py-2.5 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-accent-yellow/50;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full border-2 border-navy text-navy font-bold text-xs tracking-wider uppercase px-6 py-2.5 hover:bg-navy hover:text-white transition-all duration-200;
+  }
+
+  .nav-link {
+    @apply text-white font-black text-xs sm:text-sm tracking-widest uppercase hover:text-accent-gold transition-colors duration-200;
+  }
+
+  .dropdown-panel {
+    @apply absolute top-full left-0 mt-0 min-w-[280px] bg-white border-t-4 border-accent-orange border-x border-b border-border shadow-2xl rounded-b-xl py-4 px-6 z-50;
+  }
+
+  .dropdown-item {
+    @apply block py-2.5 px-2 text-navy font-bold text-base rounded-md hover:bg-canvas hover:text-accent-orange transition-colors duration-150;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl font-black text-navy tracking-tight;
+  }
+
+  .card-dark {
+    @apply bg-navy-dark text-white p-8 rounded-3xl shadow-xl border border-white/10;
+  }
+
+  .vote-badge-yea {
+    @apply bg-yea text-white min-w-[110px] text-center py-3 px-4 rounded-xl font-black text-lg uppercase tracking-wider;
+  }
+
+  .vote-badge-nay {
+    @apply bg-nay text-white min-w-[110px] text-center py-3 px-4 rounded-xl font-black text-lg uppercase tracking-wider;
+  }
+
+  .vote-badge-abstain {
+    @apply bg-accent-yellow text-navy min-w-[110px] text-center py-3 px-4 rounded-xl font-black text-lg uppercase tracking-wider;
+  }
+
+  .vote-badge-pending {
+    @apply bg-pending text-navy min-w-[110px] text-center py-3 px-4 rounded-xl font-black text-lg uppercase tracking-wider;
+  }
+}
